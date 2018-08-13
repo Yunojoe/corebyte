@@ -1,0 +1,187 @@
+body
+{
+    background-color: #F1F1F2;
+    font-family: 'Nunito', sans-serif;
+}
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+.bgimage {
+  width:100%;
+  height:calc(100vh - 56px);
+  background: url('img/splash.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  background-attachment: fixed;
+  
+}
+
+.bgimage::after {
+background: #FF512F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F09819, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F09819, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    opacity: 0.95;
+	display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: ' ';
+    z-index: 2;
+}
+
+.hero-index{
+	z-index: 10;
+	position: relative;
+	margin-top:-120px;
+	
+}
+
+.hero-index h2{
+	font-weight: 700;
+}
+nav .container{
+	z-index: 11;
+	position: relative;
+	background: none;
+}
+
+.bgimage h5 {
+  color:white;
+
+}
+
+/* shape divider */
+.nectar-shape-divider-wrap {
+	position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 2;
+    transform: translateZ(0);
+}
+
+.post-area.span_9 .nectar-shape-divider-wrap {
+    overflow: hidden;
+}
+
+
+.nectar-shape-divider-wrap[data-position="top"] {
+	top: -1px;
+	bottom: auto;
+}
+.nectar-shape-divider-wrap[data-position="top"] {
+  transform: rotate(180deg)
+}
+
+.nectar-shape-divider-wrap[data-front="true"] {
+  z-index: 50;
+}
+
+/*fix jagged edges*/
+.nectar-shape-divider-wrap[data-style="curve"]  .nectar-shape-divider {
+	filter: blur(0.5px);
+	transform: scale(1.03);
+}
+
+.nectar-shape-divider-wrap[data-style="waves_opacity"] svg path:first-child {
+  opacity: 0.6;
+}
+
+@media only screen and (min-width: 1000px) {
+.nectar-shape-divider-wrap[data-style="clouds"] .nectar-shape-divider {
+  min-width: 1700px;
+}
+}
+
+@media only screen and (max-width: 1000px) {
+.nectar-shape-divider-wrap[data-style="clouds"] .nectar-shape-divider {
+  min-width: 800px;
+}
+}
+
+@media only screen and (max-width: 690px) {
+.nectar-shape-divider-wrap[data-style="clouds"] .nectar-shape-divider {
+  min-width: 690px;
+}
+}
+
+.nectar-shape-divider-wrap[data-style="fan"] svg { width: 102%; left: -1%; }
+.nectar-shape-divider-wrap[data-style="fan"] svg polygon:nth-child(2) { opacity: 0.15; }
+.nectar-shape-divider-wrap[data-style="fan"] svg rect { opacity: 0.3; }
+
+.nectar-shape-divider-wrap[data-style="mountains"] svg path:first-child { opacity: 0.1; }
+.nectar-shape-divider-wrap[data-style="mountains"] svg path:nth-child(2) { opacity: 0.12; }
+.nectar-shape-divider-wrap[data-style="mountains"] svg path:nth-child(3) { opacity: 0.18; }
+.nectar-shape-divider-wrap[data-style="mountains"] svg path:nth-child(4) { opacity: 0.33; }
+
+.nectar-shape-divider-wrap[data-style="curve_opacity"] svg path:nth-child(1),
+.nectar-shape-divider-wrap[data-style="waves_opacity_alt"] svg path:nth-child(1) { opacity: 0.15; }
+.nectar-shape-divider-wrap[data-style="curve_opacity"] svg path:nth-child(2),
+.nectar-shape-divider-wrap[data-style="waves_opacity_alt"] svg path:nth-child(2) { opacity: 0.3; }
+
+.nectar-shape-divider {
+	width: 100%;
+	left: 0;
+	bottom: -1px;
+	height: 100%;
+	position: absolute;
+}
+
+.nectar-shape-divider-wrap.no-color .nectar-shape-divider {
+  fill: #fff;
+}
+@media only screen and (max-width: 1000px) {
+	.nectar-shape-divider {
+		height: 75%;
+	}
+  .nectar-shape-divider-wrap[data-style="clouds"] .nectar-shape-divider {
+    height: 55%;
+  }
+
+}
+@media only screen and (max-width: 690px) {
+	.nectar-shape-divider {
+		height: 33%;
+	}
+  .nectar-shape-divider-wrap[data-style="clouds"] .nectar-shape-divider {
+    height: 33%;
+  }
+
+}
+
+.shiny-btn {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 40px;
+  background-color: #7681b9;
+  transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55), background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 500ms linear;
+  background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"   width="1296px" height="768px" viewBox="0 0 1296 768" enable-background="new 0 0 1296 768" xml:space="preserve"><g><polygon fill="#8694D1" points="766.6,1.2 -0.2,768 200.7,768 967.5,1.2   "/></g><g><polygon fill="#8694D1" points="1094.8,1.2 328,768 528.9,768 1295.7,1.2   "/></g></svg>');
+  background-size: contain;
+  background-position: -200px center;
+  background-repeat: no-repeat;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.shiny-btn:hover {
+  transform: scale(1.1);
+  background-position: -60px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.shiny-btn:active {
+  transform: scale(1);
+  background-position: 500px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
